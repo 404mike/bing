@@ -7,6 +7,6 @@
 			Link to image: <input type="text" name="image" style="width:400px;"/>
 			<input type="submit" value="Submit"/>
 		</form>
-		<a href="http://basement.caughtinaweb.co.uk/bing/example.html">See Example...</a>
+		<a href="example.html">See Example...</a>
 	</body>
 </html>

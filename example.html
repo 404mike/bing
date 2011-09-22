@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<p>Move the your mouse over the image!</p>
+<a href="http://basement.caughtinaweb.co.uk/bing/">Make your own</a>
+<script language="javaScript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+
+	$('.mij_box').animate({ opacity: 0.4},1000,function(){
+		$('.mij_box').animate({ opacity: 0},800);
+	});
+
+    $(".mij_container").hover(function() { 
+    	num = this.id.replace("mij_container", "");
+        $(this).stop(true,true).fadeTo('fast',1);
+        $(this).css({'overflow' : 'visible'});
+        $('#mij_box'+num).stop(true,true).animate({ opacity: 0.4,}, 300);
+    }, function() {         
+        $(this).css({overflow: "hidden"});
+        $('#mij_box'+num).stop(true,true).animate({ opacity: 0,}, 500);
+        $('#mij_info'+num).stop(true,true).ccs({ opacity: 0,display: 'none'});
+    });      
+
+	$('.mij_box').mouseenter(function() {
+		num = this.id.replace("mij_box", "");
+		$('#mij_info'+num).stop(true,true).css({overflow: 'visible',display:'block'});
+		$('#mij_info'+num).animate({opacity: 0.7},800);
+	}).mouseleave(function(){
+		$('#mij_info'+num).stop(true,true).animate({ opacity: 0}, 500,function(){
+			$(this).css({display: 'none'});
+		});
+	});
+	
+	$('.mij_info').mouseenter(function(){
+		num = this.id.replace("mij_info", "");
+		$('#'+this.id).stop(true,true).css({ opacity: 0.7,overflow: 'visible',display:'block'});    	
+        $(this).stop(true,true).css({'overflow' : 'visible'});
+        $(this).css({'overflow' : 'visible'});
+        $('#mij_box'+num).stop(true,true).css({ opacity: 0.4});		
+	}).mouseleave(function(){
+		$('#'+this.id).stop(true,true).css({ opacity: 0,overflow: 'visible',display:'hidden'});
+		$(this).css({ opacity: 0.4,display: 'none'});
+		$(this).stop(true,true).css({'overflow' : 'visible'});
+        $(this).css({'overflow' : 'visible'});
+        $('#mij_box'+num).stop(true,true).animate({ opacity: 0},300);		
+	});  	
+	
+});
+</script>
+
+<style type="text/css">
+#mij_main{margin: 0 auto;position: relative;}
+.mij_container{height:150px;left:517px;position:absolute;top:50px;width:150px;overflow: hidden;}
+.mij_box{width:50px;height: 50px;background-color: black;opacity:0;position: absolute;border: 1px solid #fff;left: 50px;top: 50px;display: block;}
+.mij_info{background-color:black;border:1px solid white;color:white;left:103px;opacity:0;padding:4px;position:absolute;top:48px;width:215px;display: none;}
+</style>
+
+
+	<div id="mij_main">
+		<img src="http://www.bing.com/fd/hpk2/Wales_EN-GB1412986437.jpg">
+	<div class="mij_container" id="mij_container1" style="left: 0px; top: -10px;">
+	 <div class="mij_box" id="mij_box1"></div>
+ </div>
+
+  <a href="#" class="mij_info" id="mij_info1" style="left: 103px; top: 40px;"> 
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+ </a>
+
+<div class="mij_container" id="mij_container2" style="left: 751px; top: -34px;">
+	 <div class="mij_box" id="mij_box2"></div>
+ </div>
+
+  <a href="#" class="mij_info" id="mij_info2" style="left: 575px; top: 16px;"> 
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+ </a>
+
+<div class="mij_container" id="mij_container3" style="left: 738px; top: 321px;">
+	 <div class="mij_box" id="mij_box3"></div>
+ </div>
+
+  <a href="#" class="mij_info" id="mij_info3" style="left: 562px; top: 371px;"> 
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+ </a>
+
+<div class="mij_container" id="mij_container4" style="left: 373px; top: 167px;">
+	 <div class="mij_box" id="mij_box4"></div>
+ </div>
+
+  <a href="#" class="mij_info" id="mij_info4" style="left: 476px; top: 217px;"> 
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+ </a>
+
+<div class="mij_container" id="mij_container5" style="left: 28px; top: 330px;">
+	 <div class="mij_box" id="mij_box5"></div>
+ </div>
+
+  <a href="#" class="mij_info" id="mij_info5" style="left: 131px; top: 380px;"> 
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+ </a>
+
+</div>
+	
+	</body>
+</html>
